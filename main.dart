@@ -1,6 +1,6 @@
 import 'dart:io';
 
-// ========= Utility Functions (Input Validation) ==========
+// =========  Functions  ==========
 String getInput(String prompt) {
   stdout.write(prompt);
   return stdin.readLineSync() ?? "";
@@ -204,8 +204,6 @@ class SmartFoodNavigator {
 
 // ========= Main Program ==========
 void main() {
-  // Create object of SmartFoodNavigator
   SmartFoodNavigator app = SmartFoodNavigator();
-  // Start the application
   app.start();
 }
