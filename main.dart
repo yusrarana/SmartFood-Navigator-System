@@ -14,7 +14,7 @@ double getValidDouble(String prompt) {
     if (input != null && double.tryParse(input) != null) {
       return double.parse(input);
     } else {
-      print("❌ Invalid input. Please enter a valid number.");
+      print(" Invalid input. Please enter a valid number.");
     }
   }
 }
@@ -27,7 +27,7 @@ int getValidInt(String prompt) {
     if (input != null && int.tryParse(input) != null) {
       return int.parse(input);
     } else {
-      print("❌ Invalid number. Try again.");
+      print(" Invalid number. Try again.");
     }
   }
 }
@@ -52,7 +52,7 @@ class SmartFoodNavigator {
     if (foodCalories.containsKey(item)) {
       print("✔ Calories in $item: ${foodCalories[item]} kcal");
     } else {
-      print("❌ Item not found in database.");
+      print(" Item not found in database.");
     }
   }
 
@@ -84,11 +84,11 @@ class SmartFoodNavigator {
     print("✔ Your BMI: ${bmi.toStringAsFixed(2)}");
 
     if (bmi < 18.5) {
-      print("Underweight 😕");
+      print("Underweight ");
     } else if (bmi < 24.9) {
-      print("Normal 😊");
+      print("Normal ");
     } else if (bmi < 29.9) {
-      print("Overweight 😟");
+      print("Overweight ");
     } else {
       print("Obese ⚠");
     }
@@ -119,9 +119,9 @@ class SmartFoodNavigator {
     );
 
     if (glasses >= 8) {
-      print("✔ Great! You reached your daily goal! 💧");
+      print("✔ Great! You reached your daily goal! ");
     } else {
-      print("⚠ Drink ${8 - glasses} more glasses to complete the goal.");
+      print(" Drink ${8 - glasses} more glasses to complete the goal.");
     }
   }
 
@@ -140,9 +140,9 @@ class SmartFoodNavigator {
     };
 
     if (recipes.containsKey(ing)) {
-      print("👉 Recommended Recipe: ${recipes[ing]}");
+      print(" Recommended Recipe: ${recipes[ing]}");
     } else {
-      print("❌ No recipe found for this ingredient.");
+      print(" No recipe found for this ingredient.");
     }
   }
 
@@ -193,7 +193,7 @@ class SmartFoodNavigator {
           print("Goodbye! 👋 Stay healthy!");
           return;
         default:
-          print("❌ Invalid option. Try again.");
+          print(" Invalid option. Try again.");
       }
 
       print("\nPress Enter to continue...");
